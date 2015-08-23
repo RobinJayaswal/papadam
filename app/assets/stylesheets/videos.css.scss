@@ -1,3 +1,25 @@
 // Place all the styles related to the Videos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h2 {
+	text-align: center;
+}
+
+.square1 {
+	float:left;
+	width: 40%;
+	padding-bottom: 30%; /* = width for a square aspect ratio */
+	margin-left:7.5%;
+	margin-right:2.5;
+	background-color: #1E1E1E;
+}
+
+.square2 {
+	float:left;
+	width: 40%;
+	padding-bottom: 30%; /* = width for a square aspect ratio */
+	margin-right:7.5%;
+	margin-left:2.5%;
+	background-color: #1E1E1E;
+}

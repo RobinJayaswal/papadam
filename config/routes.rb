@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'blog/index'
+  get 'blog' => 'blog#index'
 
-  get 'videos/index'
+  get 'videos' => 'videos#index'
 
   get 'music' => 'music#index'
 

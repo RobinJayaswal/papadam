@@ -8,6 +8,8 @@
 </head>
 
 <body>
+	
+<div id="wrap">
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -16,18 +18,28 @@
     <div>
       <ul class="nav navbar-nav">
         <li class="<%= 'active' if params[:controller] == 'home'%>">
-			<a href="/">Home</a>
-		</li>
+			<a href="/">Home</a> </li>
         <li class="<%= 'active' if params[:controller] == 'music'%>">
-			<a href="/music"> Music </a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="#">Blog</a></li>
+			<a href="/music"> Music </a> </li>
+        <li class="<%= 'active' if params[:controller] == 'videos'%>">
+			<a href="/videos">Videos</a> </li>
+        <li class="<%= 'active' if params[:controller] == 'blog'%>">
+			<a href="/blog">Blog</a> </li>
       </ul>
     </div>
   </div>
 </nav>
 
+
 <%= yield %>
+
+</div>
+
+<div id="footer">
+      <div class="container">
+		  <p>Created by Robin Jayaswal</p>
+      </div>
+</div>
 
 </body>
 </html>
