@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GitWebsite</title>
+  <title>Papadam</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Papadam</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="<%= 'active' if params[:controller] == 'home'%>">
+			<a href="/">Home</a>
+		</li>
+        <li class="<%= 'active' if params[:controller] == 'music'%>">
+			<a href="/music"> Music </a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <%= yield %>
 
