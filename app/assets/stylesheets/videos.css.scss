@@ -20,11 +20,14 @@ h2 {
 
 .square2 {
 	float:left;
+	position:relative;
 	width: 40%;
 	padding-bottom: 30%; /* = width for a square aspect ratio */
-	margin-right:7.5%;
-	margin-left:2.5%;
+	margin-left:7.5%;
+	margin-right:2.5;
 	background-color: #1E1E1E;
+	color: #d3d3d3;
+	font-size: large;
 }
 
 .content {

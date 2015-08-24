@@ -2,6 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// Centering the title and video players
+h1 {
+	text-align:center;
+}
+
+p {
+	text-align: center;
+}
+
+.video-players {
+	text-align:center;
+	margin-left: auto;
+}
+
 // The following code sets up a sticky footer for the page.
 html,
 body {
