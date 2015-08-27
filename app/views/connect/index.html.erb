@@ -6,13 +6,14 @@
 <fieldset>
 	<legend> </legend>
 	
-	<div>
+	<div id = "email">
 		<%= label_tag :email, "Email:"%>
 		<%= email_field_tag :email, params[:email]%>
 	</div>
 
-	<div>
+	<div id = "button">
 		<%= submit_tag 'Subscribe' %>
+	</div>
 </fieldset>
 <%end%>
 </div>
