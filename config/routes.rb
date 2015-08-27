@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'connect' => 'connect#index'
+
   get 'blog' => 'blog#index'
 
   get 'videos' => 'videos#index'

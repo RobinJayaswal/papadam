@@ -9,7 +9,10 @@
 
 <body>
 	
+<%# enclosing all body elements except for footer in id=wrap allows for footer to be pushed to bottom in CSS%>
 <div id="wrap">
+	
+<%# set up the navigation bar%>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -25,11 +28,15 @@
 			<a href="/videos">Videos</a> </li>
         <li class="<%= 'active' if params[:controller] == 'blog'%>">
 			<a href="/blog">Blog</a> </li>
+		<li class="<%= 'active' if params[:controller] == 'connect'%>">
+			<a href="/connect">Connect</a></li>
       </ul>
     </div>
   </div>
 </nav>
+<%# end setting up navigation bar%>
 
+<%# yield main content to current view%>
 
 <%= yield %>
 
