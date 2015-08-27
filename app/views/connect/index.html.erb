@@ -1,2 +1,19 @@
-<h1>Connect#index</h1>
-<p>Find me in app/views/connect/index.html.erb</p>
+<h2>Get updates on new music and videos.</h2>
+<p> You'll get a welcome email, and never more than one email a month after that</p>
+
+<div class="form">
+<%= form_tag do %>
+<fieldset>
+	<legend> </legend>
+	
+	<div>
+		<%= label_tag :email, "Email:"%>
+		<%= email_field_tag :email, params[:email]%>
+	</div>
+
+	<div>
+		<%= submit_tag 'Subscribe' %>
+</fieldset>
+<%end%>
+</div>
+	

@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  get 'connect' => 'connect#index'
+  
+  controller :connect do
+    get 'connect' => :index
+    post 'connect' => :subscribe
+  end
+    
 
   get 'blog' => 'blog#index'
 
