@@ -1,8 +1,21 @@
 Rails.application.routes.draw do
   
+ 
+
+  
+
+  
+
+  resources :blog_users
+
   controller :connect do
     get 'connect' => :index
     post 'connect' => :subscribe
+  end
+  
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
   end
     
 
