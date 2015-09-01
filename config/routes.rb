@@ -2,9 +2,10 @@ Rails.application.routes.draw do
   
  
 
-  
-
-  
+  controller :admin_functions do
+    get 'admin' => :index
+    post 'admin' => :create
+  end
 
   resources :blog_users
 
