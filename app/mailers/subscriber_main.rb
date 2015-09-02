@@ -16,9 +16,11 @@ class SubscriberMain < ActionMailer::Base
   #
   #   en.subscriber_main.new.subject
   #
-  def new
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
+  def new(subject, content, email)
+    @subject = subject
+    @content = content
+    @email = email
+    
+    mail to: @email, subject: @subject
   end
 end

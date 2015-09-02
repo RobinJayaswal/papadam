@@ -11,6 +11,10 @@ class AdminFunctionsController < ApplicationController
         format.html {redirect_to '/admin', notice: "Blog post was created"}
       end
     elsif params[:subject] and !params[:title]
+      Subscriber.all.each do |subscriber|
+      SubscriberMain.new(params[:subject], params[:content], subscriber.email).deliver
+      end
+      
       respond_to do |format|
         format.html {redirect_to '/admin', notice: "Email was sent out"}
       end

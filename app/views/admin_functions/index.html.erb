@@ -4,49 +4,67 @@
 
 <h1>New Blog Post or Email</h1>
 
+
+<br>
+
+
 <% # create the two forms, with different things in the params to signify whether button was pressed on email or blog submit form%>
 
-
+<div class = "forms">
 <% # form for admin to create blog posts from %>
 <%= form_tag do %>
 <fieldset>
-	<legend> </legend>
 	
-	<div id = "title">
+	<div style="margin-left:1.5%">
+	<legend> Blog </legend>
+	</div>
+	
+	<div id = "title" style="margin-left:2.5%">
 		<%= label_tag :title, "Title:" %>
+		<br>
 		<%= text_field_tag :title, params[:title]%>
 	</div>
 	
-	<div id = "content">
+	<div id = "content" style="margin-left:2.5%">
 		<%= label_tag :content, "Content:"%>
-		<%= text_field_tag :content, params[:content]%>
+		<br>
+		<%= text_area_tag :content, params[:content], rows: 6, cols: 40%>
 	</div>
-	
-	<div id="button">
+	<br>
+	<div id="button" style="margin-left:2.5%">
 		<%= submit_tag 'Post to Blog' %>
 	</div>
 		
 </fieldset>
 <%end%>
-	
-	
+
+<br>
+<br>
+<br>
+
 <%= form_tag do %>
 <fieldset>
-	<legend> </legend>
+	<div style="margin-left:1.5%">
+	<legend> Email </legend>
+	</div>
 	
-	<div id = "title">
+	<div id = "title" style="margin-left:2.5%">
 		<%= label_tag :subject, "Subject:" %>
+		<br>
 		<%= text_field_tag :subject, params[:subject]%>
 	</div>
 	
-	<div id = "content">
+	<div id = "content" style="margin-left:2.5%">
 		<%= label_tag :content, "Content:"%>
-		<%= text_field_tag :content, params[:content]%>
+		<br>
+		<%= text_area_tag :content, params[:content], rows: 6, cols: 40%>
 	</div>
-	
-	<div id="button">
+	<br>
+	<div id="button" style="margin-left:2.5%">
 		<%= submit_tag 'Send Out' %>
 	</div>
+	<br>
 	
 </fieldset>
 <%end%>
+</div>
