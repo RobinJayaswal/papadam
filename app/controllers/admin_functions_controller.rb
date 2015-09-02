@@ -5,7 +5,8 @@ class AdminFunctionsController < ApplicationController
   
   def create
     if params[:title] and !params[:subject]
-      
+      @post = Post.new(title: params[:title], content: params[:content])
+      @post.save
       respond_to do |format|
         format.html {redirect_to '/admin', notice: "Blog post was created"}
       end
