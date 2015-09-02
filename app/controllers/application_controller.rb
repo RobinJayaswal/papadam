@@ -7,8 +7,9 @@ class ApplicationController < ActionController::Base
 
   protected
   def authorize
-    unless BlogUser.find_by_id(session[:user_id])
-      redirect_to "/login", notice: "Must be an admin to access this page"
-    end
+      unless BlogUser.find_by_id(session[:user_id]) || BlogUser.count == 0
+        redirect_to "/login", notice: "Must be an admin to access this page"
+      end
   end
+  
 end
